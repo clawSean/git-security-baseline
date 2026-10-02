@@ -14,13 +14,18 @@ Implementation and bounded pilot.
 - Live pilot caught and repaired a fail-open edge case: GitLeaks can log an
   invalid revision as fatal while exiting zero when a stale checkout lacks the
   remote SHA. The hook now independently requires that commit object.
+- GitLeaks CI is green on `clawSean/handoffs`,
+  `clawSean/gateway-uptime-watch`, and `clawSean/mac-health`.
+- All three pilot checkouts use the shared pre-push hook, and each published
+  pilot commit is locally SSH-signature verified.
 
 ## In progress
 
 - Register the signing public key with GitHub after owner device authorization.
-- Publish this canonical baseline and pin pilot consumers to its immutable SHA.
-- Apply the baseline to selected high-value repositories and prove local + CI
-  behavior.
+- Register the signing public key with GitHub after owner device authorization;
+  GitHub currently reports the signed commits as `unknown_key`.
+- Decide whether to add narrow fingerprint ignores for Portal's intentional
+  privacy-test credential fixtures before onboarding that repository.
 
 ## Gate
 
