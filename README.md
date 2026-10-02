@@ -21,7 +21,7 @@ be skipped with `--no-verify`.
 Run this from a new or existing repository checkout:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/clawSean/git-security-baseline/main/scripts/bootstrap.sh | sh
+curl -fsSL https://raw.githubusercontent.com/clawSean/git-security-baseline/cde43088e80e4f3566842617f95db12c26537f97/scripts/bootstrap.sh | sh
 ```
 
 Pass a checkout path after `sh -s --` when running elsewhere. The bootstrap
