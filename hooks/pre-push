@@ -17,6 +17,11 @@ while read -r local_ref local_sha remote_ref remote_sha; do
   if [ "$remote_sha" = "$zero" ]; then
     log_opts="$local_sha --not --remotes=$remote_name"
   else
+    if ! git -C "$repo_root" cat-file -e "$remote_sha^{commit}" 2>/dev/null; then
+      echo "Push blocked: remote commit $remote_sha is not present locally." >&2
+      echo "Fetch $remote_name, reconcile the branch, and push again." >&2
+      exit 1
+    fi
     log_opts="$remote_sha..$local_sha"
   fi
 
