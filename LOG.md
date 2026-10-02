@@ -1,5 +1,13 @@
 # Log
 
+## 2026-10-02
+
+- Added a GitHub-hosted one-command bootstrap for new or existing repositories.
+  It caches the shared hook in the user data directory, configures only the
+  target checkout, and writes a reusable CI caller pinned to immutable baseline
+  commit `95d9ef8505d7d38a6b7a9c599b00781600221aa7`.
+- The bootstrap refuses to overwrite a different existing GitLeaks workflow.
+
 ## 2026-10-01
 
 - Created the canonical Git security baseline project.

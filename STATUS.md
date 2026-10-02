@@ -21,10 +21,11 @@ Operational bounded pilot.
 - GitHub signing key `ClawPop clawSean commit signing` is registered, and exact
   commits in the baseline plus all three pilot repositories report
   `verified: true` with reason `valid`.
+- GitHub-hosted one-command bootstrap installs the shared pinned hook and writes
+  the immutable-SHA reusable CI caller for a new or existing checkout.
 
 ## In progress
 
-- Register the signing public key with GitHub after owner device authorization.
 - Decide whether to add narrow fingerprint ignores for Portal's intentional
   privacy-test credential fixtures before onboarding that repository.
 

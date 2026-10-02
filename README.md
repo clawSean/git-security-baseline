@@ -16,6 +16,20 @@ Reusable provenance and secret-scanning controls for `clawSean` repositories.
 Local hooks improve feedback time. CI is the durable backstop because hooks can
 be skipped with `--no-verify`.
 
+## One-command bootstrap
+
+Run this from a new or existing repository checkout:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/clawSean/git-security-baseline/main/scripts/bootstrap.sh | sh
+```
+
+Pass a checkout path after `sh -s --` when running elsewhere. The bootstrap
+downloads the shared hook into the user data directory, configures only that
+checkout, and writes `.github/workflows/gitleaks.yml`. Both controls are pinned
+to an immutable baseline commit. It refuses to replace a different existing
+workflow.
+
 ## Adopt locally
 
 ```sh
