@@ -17,3 +17,6 @@
 - Portal's full-history scan found ten matches in intentional privacy/security
   test fixtures. Left Portal unenrolled rather than weakening detection or
   adding unreviewed ignores.
+- Registered the dedicated public SSH signing key with GitHub after owner
+  device authorization. GitHub exact-commit readback changed the baseline and
+  all three pilot commits from `unknown_key` to `verified: true`, reason `valid`.
